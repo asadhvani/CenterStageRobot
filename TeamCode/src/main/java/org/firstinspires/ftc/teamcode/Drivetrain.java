@@ -6,6 +6,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.IMU;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 
+//Why can't the variables be public
 public class Drivetrain{
     private double y; //value of y on joystick
     private double x; //value of x on joystick
