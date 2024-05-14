@@ -4,7 +4,7 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 
-public class Gripper{
+public class Gripper{//Constructor
     private Servo SRV_LG, SRV_RG;
     private DcMotor MTR_LVS, MTR_RVS;
     private int gripperCurrPosition;
@@ -57,6 +57,7 @@ public class Gripper{
         SRV_LG.setPosition(dGripperClosed);
         SRV_RG.setPosition(dGripperClosed);
         gripperCurrPosition = closed;
+        System.out.println("Gripper is closed, if pixel is not holding stop program");
     }
 
     public void moveSlideDown() {
