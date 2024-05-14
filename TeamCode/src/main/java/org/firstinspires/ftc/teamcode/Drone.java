@@ -1,3 +1,5 @@
+//What is the drone, and what does it do?
+
 package org.firstinspires.ftc.teamcode;
 
 //import the necessary packages for instantiating Motor/Hardware Map
