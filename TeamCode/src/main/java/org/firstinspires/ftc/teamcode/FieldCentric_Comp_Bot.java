@@ -1,11 +1,11 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode;//Whole package?
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @TeleOp
-public class FieldCentric_Comp_Bot extends LinearOpMode{
-    Drivetrain myDriveTrain = null;
+public class FieldCentric_Comp_Bot extends LinearOpMode{//Child class of LinearOpMode
+    Drivetrain myDriveTrain = null;//Initialize variables
     Ramp myRamp;
     Intake myIntake;
     Gripper myGripper;
@@ -13,21 +13,21 @@ public class FieldCentric_Comp_Bot extends LinearOpMode{
 
     //@Override
 
-    public void runOpMode() throws InterruptedException {
-        myDriveTrain = new Drivetrain(this);
+    public void runOpMode() throws InterruptedException {//Method
+        myDriveTrain = new Drivetrain(this);//Create objects
         myRamp = new Ramp(this);
         myIntake = new Intake(this);
         myGripper = new Gripper(this);
         myDrone = new Drone(this);
 
-        waitForStart();
+        waitForStart();//Run method
         if (isStopRequested()) return;
         while (opModeIsActive()){
             //**************************************************************************************
             // ---------------------Gamepad 1 Controls ---------------------------------------------
-            myDriveTrain.drive();
+            myDriveTrain.drive();//Run from drivetrain method
 
-            if (gamepad1.left_trigger != 0){
+            if (gamepad1.left_trigger != 0){//If statements, not too efficient, rather use methods
                 if (!myRamp.isRampDown()) {
                     myRamp.moveRampDown();
                 }
