@@ -1,13 +1,13 @@
 package org.firstinspires.ftc.teamcode;
 
 // Import the necessary packages for instantiating Motor
-import com.qualcomm.hardware.rev.RevHubOrientationOnRobot;
+import com.qualcomm.hardware.rev.RevHubOrientationOnRobot;//Import libraries
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.IMU;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 
 //Why can't the variables be public
-public class Drivetrain{
+public class Drivetrain{//Constructor, initialize variables here
     private double y; //value of y on joystick
     private double x; //value of x on joystick
     private double rx; //rotation value
@@ -25,7 +25,7 @@ public class Drivetrain{
 
 
     // Create necessary variables to control each 4 wheels and IMU
-    DcMotor MTR_LF;
+    DcMotor MTR_LF;//?
     DcMotor MTR_LB;
     DcMotor MTR_RF;
     DcMotor MTR_RB;
@@ -35,7 +35,7 @@ public class Drivetrain{
     // instantiation of the class
     public Drivetrain(FieldCentric_Comp_Bot iBot) {
         // Take the passed in value of gamepad1 and telemetry and assign to class variables.
-        bot = iBot;
+        bot = iBot;//Change variable name
 
         // Setup Motors
         MTR_LF = bot.hardwareMap.dcMotor.get("left_front_mtr");
@@ -61,7 +61,7 @@ public class Drivetrain{
         rightBackPower = 0.0;
     }
 
-    public void drive(){
+    public void drive(){//Drive method, uses initialized variables
         //---------------------Gamepad 1 Controls/Drivetrain Movement----------------------//
         y = -(bot.gamepad1.left_stick_y) * ySensitivity; // Reversed Value
         x = bot.gamepad1.left_stick_x * xSensitivity ; // The double value on the left is a sensitivity setting (change when needed)
